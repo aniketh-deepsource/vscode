@@ -17,10 +17,10 @@ export class InMemoryDocument implements vscode.TextDocument {
 	}
 
 
-	isUntitled: boolean = false;
-	languageId: string = '';
-	isDirty: boolean = false;
-	isClosed: boolean = false;
+	isUntitled = false;
+	languageId = '';
+	isDirty = false;
+	isClosed = false;
 	eol: vscode.EndOfLine = os.platform() === 'win32' ? vscode.EndOfLine.CRLF : vscode.EndOfLine.LF;
 	notebook: undefined;
 

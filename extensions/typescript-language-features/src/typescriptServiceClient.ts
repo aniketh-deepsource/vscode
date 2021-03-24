@@ -112,7 +112,7 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 	private lastStart: number;
 	private numberRestarts: number;
 	private _isPromptingAfterCrash = false;
-	private isRestarting: boolean = false;
+	private isRestarting = false;
 	private hasServerFatallyCrashedTooManyTimes = false;
 	private readonly loadingIndicator = new ServerInitializingIndicator();
 
@@ -353,8 +353,8 @@ export default class TypeScriptServiceClient extends Disposable implements IType
 		}
 	}
 
-	private token: number = 0;
-	private startService(resendModels: boolean = false): ServerState.State {
+	private token = 0;
+	private startService(resendModels = false): ServerState.State {
 		this.info(`Starting TS Server `);
 
 		if (this.isDisposed) {

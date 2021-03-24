@@ -15,7 +15,7 @@ import { isSupportedLanguageMode } from './languageModeIds';
 export default class ManagedFileContextManager extends Disposable {
 	private static readonly contextName = 'typescript.isManagedFile';
 
-	private isInManagedFileContext: boolean = false;
+	private isInManagedFileContext = false;
 
 	public constructor(
 		activeJsTsEditorTracker: ActiveJsTsEditorTracker,

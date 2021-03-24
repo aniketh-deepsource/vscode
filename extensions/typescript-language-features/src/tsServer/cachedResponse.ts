@@ -14,8 +14,8 @@ type Resolve<T extends Proto.Response> = () => Promise<ServerResponse.Response<T
  */
 export class CachedResponse<T extends Proto.Response> {
 	private response?: Promise<ServerResponse.Response<T>>;
-	private version: number = -1;
-	private document: string = '';
+	private version = -1;
+	private document = '';
 
 	/**
 	 * Execute a request. May return cached value or resolve the new value

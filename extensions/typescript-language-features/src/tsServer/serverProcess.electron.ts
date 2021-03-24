@@ -17,8 +17,8 @@ import { TypeScriptVersionManager } from './versionManager';
 
 const localize = nls.loadMessageBundle();
 
-const defaultSize: number = 8192;
-const contentLength: string = 'Content-Length: ';
+const defaultSize = 8192;
+const contentLength = 'Content-Length: ';
 const contentLengthSize: number = Buffer.byteLength(contentLength, 'utf8');
 const blank: number = Buffer.from(' ', 'utf8')[0];
 const backslashR: number = Buffer.from('\r', 'utf8')[0];
@@ -26,7 +26,7 @@ const backslashN: number = Buffer.from('\n', 'utf8')[0];
 
 class ProtocolBuffer {
 
-	private index: number = 0;
+	private index = 0;
 	private buffer: Buffer = Buffer.allocUnsafe(defaultSize);
 
 	public append(data: string | Buffer): void {
@@ -93,7 +93,7 @@ class ProtocolBuffer {
 class Reader<T> extends Disposable {
 
 	private readonly buffer: ProtocolBuffer = new ProtocolBuffer();
-	private nextMessageLength: number = -1;
+	private nextMessageLength = -1;
 
 	public constructor(readable: Readable) {
 		super();

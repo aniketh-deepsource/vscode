@@ -215,7 +215,7 @@ export class FindInput extends Widget {
 			if (event.equals(KeyCode.LeftArrow) || event.equals(KeyCode.RightArrow) || event.equals(KeyCode.Escape)) {
 				let index = indexes.indexOf(<HTMLElement>document.activeElement);
 				if (index >= 0) {
-					let newIndex: number = -1;
+					let newIndex = -1;
 					if (event.equals(KeyCode.RightArrow)) {
 						newIndex = (index + 1) % indexes.length;
 					} else if (event.equals(KeyCode.LeftArrow)) {
@@ -401,7 +401,7 @@ export class FindInput extends Widget {
 		this.regex.focus();
 	}
 
-	private _lastHighlightFindOptions: number = 0;
+	private _lastHighlightFindOptions = 0;
 	public highlightFindOptions(): void {
 		this.domNode.classList.remove('highlight-' + (this._lastHighlightFindOptions));
 		this._lastHighlightFindOptions = 1 - this._lastHighlightFindOptions;

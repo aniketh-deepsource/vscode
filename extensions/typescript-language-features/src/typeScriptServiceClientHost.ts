@@ -52,7 +52,7 @@ export default class TypeScriptServiceClientHost extends Disposable {
 
 	private readonly fileConfigurationManager: FileConfigurationManager;
 
-	private reportStyleCheckAsWarnings: boolean = true;
+	private reportStyleCheckAsWarnings = true;
 
 	private readonly commandManager: CommandManager;
 

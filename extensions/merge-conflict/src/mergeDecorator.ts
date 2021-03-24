@@ -11,7 +11,7 @@ export default class MergeDecorator implements vscode.Disposable {
 
 	private decorations: { [key: string]: vscode.TextEditorDecorationType } = {};
 
-	private decorationUsesWholeLine: boolean = true; // Useful for debugging, set to false to see exact match ranges
+	private decorationUsesWholeLine = true; // Useful for debugging, set to false to see exact match ranges
 
 	private config?: interfaces.IExtensionConfiguration;
 	private tracker: interfaces.IDocumentMergeConflictTracker;

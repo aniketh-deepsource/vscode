@@ -115,7 +115,7 @@ class VSCodeWorkspaceMarkdownDocumentProvider extends Disposable implements Work
 
 export default class MarkdownWorkspaceSymbolProvider extends Disposable implements vscode.WorkspaceSymbolProvider {
 	private _symbolCache = new Map<string, Lazy<Thenable<vscode.SymbolInformation[]>>>();
-	private _symbolCachePopulated: boolean = false;
+	private _symbolCachePopulated = false;
 
 	public constructor(
 		private _symbolProvider: MDDocumentSymbolProvider,

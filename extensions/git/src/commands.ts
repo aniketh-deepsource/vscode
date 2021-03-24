@@ -101,7 +101,7 @@ class MergeItem implements QuickPickItem {
 class RebaseItem implements QuickPickItem {
 
 	get label(): string { return this.ref.name || ''; }
-	description: string = '';
+	description = '';
 
 	constructor(readonly ref: Ref) { }
 

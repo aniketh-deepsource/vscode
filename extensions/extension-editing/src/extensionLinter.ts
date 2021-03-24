@@ -354,7 +354,7 @@ function endsWith(haystack: string, needle: string): boolean {
 	}
 }
 
-function parseUri(src: string, base?: string, retry: boolean = true): Uri | null {
+function parseUri(src: string, base?: string, retry = true): Uri | null {
 	try {
 		let url = new URL(src, base);
 		return Uri.parse(url.toString());

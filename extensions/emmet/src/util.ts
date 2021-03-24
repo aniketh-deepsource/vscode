@@ -34,7 +34,7 @@ export function getEmmetHelper() {
 /**
  * Update Emmet Helper to use user snippets from the extensionsPath setting
  */
-export function updateEmmetExtensionsPath(forceRefresh: boolean = false) {
+export function updateEmmetExtensionsPath(forceRefresh = false) {
 	const helper = getEmmetHelper();
 	let extensionsPath = vscode.workspace.getConfiguration('emmet').get<string[]>('extensionsPath');
 	if (!extensionsPath) {
@@ -108,7 +108,7 @@ export function isStyleSheet(syntax: string): boolean {
 	return stylesheetSyntaxes.includes(syntax);
 }
 
-export function validate(allowStylesheet: boolean = true): boolean {
+export function validate(allowStylesheet = true): boolean {
 	let editor = vscode.window.activeTextEditor;
 	if (!editor) {
 		vscode.window.showInformationMessage('No editor is active');

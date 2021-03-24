@@ -17,7 +17,7 @@ export interface IWindowChainElement {
 	iframeElement: Element | null;
 }
 
-let hasDifferentOriginAncestorFlag: boolean = false;
+let hasDifferentOriginAncestorFlag = false;
 let sameOriginWindowChainCache: IWindowChainElement[] | null = null;
 
 function getParentWindowIfSameOrigin(w: Window): Window | null {

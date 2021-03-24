@@ -917,7 +917,7 @@ export class Repository {
 		return parseGitCommits(result.stdout);
 	}
 
-	async bufferString(object: string, encoding: string = 'utf8', autoGuessEncoding = false): Promise<string> {
+	async bufferString(object: string, encoding = 'utf8', autoGuessEncoding = false): Promise<string> {
 		const stdout = await this.buffer(object);
 
 		if (autoGuessEncoding) {
@@ -1285,7 +1285,7 @@ export class Repository {
 
 		const treeish = await this.getCommit('HEAD').then(() => 'HEAD', () => '');
 		let mode: string;
-		let add: string = '';
+		let add = '';
 
 		try {
 			const details = await this.getObjectDetails(treeish, path);
@@ -1514,7 +1514,7 @@ export class Repository {
 		}
 	}
 
-	async reset(treeish: string, hard: boolean = false): Promise<void> {
+	async reset(treeish: string, hard = false): Promise<void> {
 		const args = ['reset', hard ? '--hard' : '--soft', treeish];
 		await this.exec(args);
 	}
@@ -1669,7 +1669,7 @@ export class Repository {
 		}
 	}
 
-	async push(remote?: string, name?: string, setUpstream: boolean = false, followTags = false, forcePushMode?: ForcePushMode, tags = false): Promise<void> {
+	async push(remote?: string, name?: string, setUpstream = false, followTags = false, forcePushMode?: ForcePushMode, tags = false): Promise<void> {
 		const args = ['push'];
 
 		if (forcePushMode === ForcePushMode.ForceWithLease) {

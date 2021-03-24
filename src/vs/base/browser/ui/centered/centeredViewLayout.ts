@@ -54,8 +54,8 @@ export interface ICenteredViewStyles extends ISplitViewStyles {
 export class CenteredViewLayout implements IDisposable {
 
 	private splitView?: SplitView;
-	private width: number = 0;
-	private height: number = 0;
+	private width = 0;
+	private height = 0;
 	private style!: ICenteredViewStyles;
 	private didLayout = false;
 	private emptyViews: ISplitViewView[] | undefined;

@@ -56,8 +56,8 @@ export class BreadcrumbsWidget {
 	private readonly _nodes = new Array<HTMLDivElement>();
 	private readonly _freeNodes = new Array<HTMLDivElement>();
 
-	private _focusedItemIdx: number = -1;
-	private _selectedItemIdx: number = -1;
+	private _focusedItemIdx = -1;
+	private _selectedItemIdx = -1;
 
 	private _pendingLayout: IDisposable | undefined;
 	private _dimension: dom.Dimension | undefined;

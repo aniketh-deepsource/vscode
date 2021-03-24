@@ -209,7 +209,7 @@ export class ApiRepository implements Repository {
 		return this._repository.pull(undefined, unshallow);
 	}
 
-	push(remoteName?: string, branchName?: string, setUpstream: boolean = false, force?: ForcePushMode): Promise<void> {
+	push(remoteName?: string, branchName?: string, setUpstream = false, force?: ForcePushMode): Promise<void> {
 		return this._repository.pushTo(remoteName, branchName, setUpstream, force);
 	}
 

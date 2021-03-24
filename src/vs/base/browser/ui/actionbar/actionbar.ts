@@ -72,9 +72,9 @@ export class ActionBar extends Disposable implements IActionRunner {
 	private focusTracker: DOM.IFocusTracker;
 
 	// Trigger Key Tracking
-	private triggerKeyDown: boolean = false;
+	private triggerKeyDown = false;
 
-	private focusable: boolean = true;
+	private focusable = true;
 
 	// Elements
 	domNode: HTMLElement;
@@ -393,7 +393,7 @@ export class ActionBar extends Disposable implements IActionRunner {
 	focus(index?: number): void;
 	focus(selectFirst?: boolean): void;
 	focus(arg?: number | boolean): void {
-		let selectFirst: boolean = false;
+		let selectFirst = false;
 		let index: number | undefined = undefined;
 		if (arg === undefined) {
 			selectFirst = true;

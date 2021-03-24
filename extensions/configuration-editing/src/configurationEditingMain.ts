@@ -108,7 +108,7 @@ function registerExtensionsCompletionsInWorkspaceConfigurationDocument(): vscode
 vscode.languages.registerDocumentSymbolProvider({ pattern: '**/launch.json', language: 'jsonc' }, {
 	provideDocumentSymbols(document: vscode.TextDocument, _token: vscode.CancellationToken): vscode.ProviderResult<vscode.SymbolInformation[]> {
 		const result: vscode.SymbolInformation[] = [];
-		let name: string = '';
+		let name = '';
 		let lastProperty = '';
 		let startOffset = 0;
 		let depthInObjects = 0;
