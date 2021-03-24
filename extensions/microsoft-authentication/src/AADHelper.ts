@@ -665,7 +665,7 @@ export class AzureActiveDirectoryService {
 		}, 1000 * 60 * 30));
 	}
 
-	private handleRefreshNetworkError(sessionId: string, refreshToken: string, scope: string, attempts: number = 1): Promise<boolean> {
+	private handleRefreshNetworkError(sessionId: string, refreshToken: string, scope: string, attempts = 1): Promise<boolean> {
 		return new Promise((resolve, _) => {
 			if (attempts === 3) {
 				Logger.error('Token refresh failed after 3 attempts');

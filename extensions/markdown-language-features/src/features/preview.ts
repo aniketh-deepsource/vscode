@@ -116,7 +116,7 @@ class MarkdownPreview extends Disposable implements WebviewResourceProvider {
 	private firstUpdate = true;
 	private currentVersion?: PreviewDocumentVersion;
 	private isScrolling = false;
-	private _disposed: boolean = false;
+	private _disposed = false;
 	private imageInfo: { readonly id: string, readonly width: number, readonly height: number; }[] = [];
 
 	private readonly _fileWatchersBySrc = new Map</* src: */ string, vscode.FileSystemWatcher>();

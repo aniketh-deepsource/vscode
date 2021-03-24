@@ -26,7 +26,7 @@ interface EmbeddedRegion { languageId: string | undefined; start: number; end: n
 export function getDocumentRegions(languageService: LanguageService, document: TextDocument): HTMLDocumentRegions {
 	let regions: EmbeddedRegion[] = [];
 	let scanner = languageService.createScanner(document.getText());
-	let lastTagName: string = '';
+	let lastTagName = '';
 	let lastAttributeName: string | null = null;
 	let languageIdFromType: string | undefined = undefined;
 	let importedScripts: string[] = [];

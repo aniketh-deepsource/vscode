@@ -51,7 +51,7 @@ export function closeAllEditors(): Thenable<any> {
 
 }
 
-export function withRandomFileEditor(initialContents: string, fileExtension: string = 'txt', run: (editor: vscode.TextEditor, doc: vscode.TextDocument) => Thenable<void>): Thenable<boolean> {
+export function withRandomFileEditor(initialContents: string, fileExtension = 'txt', run: (editor: vscode.TextEditor, doc: vscode.TextDocument) => Thenable<void>): Thenable<boolean> {
 	return createRandomFile(initialContents, fileExtension).then(file => {
 		return vscode.workspace.openTextDocument(file).then(doc => {
 			return vscode.window.showTextDocument(doc).then((editor) => {

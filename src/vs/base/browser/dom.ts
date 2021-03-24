@@ -191,7 +191,7 @@ class AnimationFrameQueueItem implements IDisposable {
 	public priority: number;
 	private _canceled: boolean;
 
-	constructor(runner: () => void, priority: number = 0) {
+	constructor(runner: () => void, priority = 0) {
 		this._runner = runner;
 		this.priority = priority;
 		this._canceled = false;
@@ -252,7 +252,7 @@ class AnimationFrameQueueItem implements IDisposable {
 		inAnimationFrameRunner = false;
 	};
 
-	scheduleAtNextAnimationFrame = (runner: () => void, priority: number = 0) => {
+	scheduleAtNextAnimationFrame = (runner: () => void, priority = 0) => {
 		let item = new AnimationFrameQueueItem(runner, priority);
 		NEXT_QUEUE.push(item);
 
@@ -537,7 +537,7 @@ export function size(element: HTMLElement, width: number | null, height: number 
 	}
 }
 
-export function position(element: HTMLElement, top: number, right?: number, bottom?: number, left?: number, position: string = 'absolute'): void {
+export function position(element: HTMLElement, top: number, right?: number, bottom?: number, left?: number, position = 'absolute'): void {
 	if (typeof top === 'number') {
 		element.style.top = `${top}px`;
 	}

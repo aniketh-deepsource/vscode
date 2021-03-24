@@ -11,8 +11,8 @@ class WindowManager {
 	public static readonly INSTANCE = new WindowManager();
 
 	// --- Zoom Level
-	private _zoomLevel: number = 0;
-	private _lastZoomLevelChangeTime: number = 0;
+	private _zoomLevel = 0;
+	private _lastZoomLevelChangeTime = 0;
 	private readonly _onDidChangeZoomLevel = new Emitter<number>();
 
 	public readonly onDidChangeZoomLevel: Event<number> = this._onDidChangeZoomLevel.event;
@@ -34,7 +34,7 @@ class WindowManager {
 	}
 
 	// --- Zoom Factor
-	private _zoomFactor: number = 1;
+	private _zoomFactor = 1;
 
 	public getZoomFactor(): number {
 		return this._zoomFactor;
@@ -56,7 +56,7 @@ class WindowManager {
 	}
 
 	// --- Fullscreen
-	private _fullscreen: boolean = false;
+	private _fullscreen = false;
 	private readonly _onDidChangeFullscreen = new Emitter<void>();
 
 	public readonly onDidChangeFullscreen: Event<void> = this._onDidChangeFullscreen.event;

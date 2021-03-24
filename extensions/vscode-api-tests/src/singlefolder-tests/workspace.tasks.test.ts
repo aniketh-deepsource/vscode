@@ -137,7 +137,7 @@ import { assertNoRpc } from '../utils';
 					 */
 					customProp1: string;
 				}
-				const taskType: string = 'customTesting';
+				const taskType = 'customTesting';
 				const taskName = 'First custom task';
 				let isPseudoterminalClosed = false;
 				// There's a strict order that should be observed here:
@@ -222,7 +222,7 @@ import { assertNoRpc } from '../utils';
 					 */
 					customProp1: string;
 				}
-				const taskType: string = 'customTesting';
+				const taskType = 'customTesting';
 				const taskName = 'First custom task';
 
 				// Launch the task

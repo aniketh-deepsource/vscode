@@ -61,7 +61,7 @@ class AbcEditor extends Disposable {
 	public readonly onDispose = this._onDispose.event;
 
 	private readonly limit = pLimit(1);
-	private syncedVersion: number = -1;
+	private syncedVersion = -1;
 	private currentWorkspaceEdit?: Thenable<void>;
 
 	constructor(

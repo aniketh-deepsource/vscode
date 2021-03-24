@@ -22,7 +22,7 @@ export function deprecated(_target: any, key: string, descriptor: any): void {
 
 export class GitExtensionImpl implements GitExtension {
 
-	enabled: boolean = false;
+	enabled = false;
 
 	private _onDidChangeEnablement = new EventEmitter<boolean>();
 	readonly onDidChangeEnablement: Event<boolean> = this._onDidChangeEnablement.event;

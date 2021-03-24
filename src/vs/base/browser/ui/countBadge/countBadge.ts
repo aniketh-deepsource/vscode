@@ -30,7 +30,7 @@ const defaultOpts = {
 export class CountBadge implements IThemable {
 
 	private element: HTMLElement;
-	private count: number = 0;
+	private count = 0;
 	private countFormat: string;
 	private titleFormat: string;
 

@@ -405,7 +405,7 @@ export class Grid<T extends IView = IView> extends Disposable {
 		return this.gridview.getView() as GridBranchNode<T>;
 	}
 
-	getNeighborViews(view: T, direction: Direction, wrap: boolean = false): T[] {
+	getNeighborViews(view: T, direction: Direction, wrap = false): T[] {
 		if (!this.didLayout) {
 			throw new Error('Can\'t call getNeighborViews before first layout');
 		}
@@ -585,7 +585,7 @@ export class SerializableGrid<T extends ISerializableView> extends Grid<T> {
 	 * Useful information in order to proportionally restore view sizes
 	 * upon the very first layout call.
 	 */
-	private initialLayoutContext: boolean = true;
+	private initialLayoutContext = true;
 
 	serialize(): ISerializedGrid {
 		return {

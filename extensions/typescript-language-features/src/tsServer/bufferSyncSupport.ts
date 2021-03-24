@@ -299,7 +299,7 @@ class GetErrRequest {
 		return new GetErrRequest(client, files, onDone);
 	}
 
-	private _done: boolean = false;
+	private _done = false;
 	private readonly _token: vscode.CancellationTokenSource = new vscode.CancellationTokenSource();
 
 	private constructor(
@@ -344,14 +344,14 @@ export default class BufferSyncSupport extends Disposable {
 
 	private readonly client: ITypeScriptServiceClient;
 
-	private _validateJavaScript: boolean = true;
-	private _validateTypeScript: boolean = true;
+	private _validateJavaScript = true;
+	private _validateTypeScript = true;
 	private readonly modeIds: Set<string>;
 	private readonly syncedBuffers: SyncedBufferMap;
 	private readonly pendingDiagnostics: PendingDiagnostics;
 	private readonly diagnosticDelayer: Delayer<any>;
 	private pendingGetErr: GetErrRequest | undefined;
-	private listening: boolean = false;
+	private listening = false;
 	private readonly synchronizer: BufferSynchronizer;
 
 	constructor(
@@ -546,7 +546,7 @@ export default class BufferSyncSupport extends Disposable {
 		this.triggerDiagnostics();
 	}
 
-	private triggerDiagnostics(delay: number = 200) {
+	private triggerDiagnostics(delay = 200) {
 		this.diagnosticDelayer.trigger(() => {
 			this.sendPendingDiagnostics();
 		}, delay);

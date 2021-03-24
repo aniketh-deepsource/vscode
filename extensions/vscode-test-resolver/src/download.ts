@@ -96,7 +96,7 @@ function unzipVSCodeServer(vscodeArchivePath: string, extractDir: string, destDi
 	}
 }
 
-export async function downloadAndUnzipVSCodeServer(updateUrl: string, commit: string, quality: string = 'stable', destDir: string, log: (messsage: string) => void): Promise<string> {
+export async function downloadAndUnzipVSCodeServer(updateUrl: string, commit: string, quality = 'stable', destDir: string, log: (messsage: string) => void): Promise<string> {
 
 	const extractDir = path.join(destDir, commit);
 	if (fs.existsSync(extractDir)) {

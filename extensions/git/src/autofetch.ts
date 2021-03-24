@@ -22,8 +22,8 @@ export class AutoFetcher {
 	private _onDidChange = new EventEmitter<boolean>();
 	private onDidChange = this._onDidChange.event;
 
-	private _enabled: boolean = false;
-	private _fetchAll: boolean = false;
+	private _enabled = false;
+	private _fetchAll = false;
 	get enabled(): boolean { return this._enabled; }
 	set enabled(enabled: boolean) { this._enabled = enabled; this._onDidChange.fire(enabled); }
 

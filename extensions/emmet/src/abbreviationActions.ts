@@ -308,7 +308,7 @@ export function expandEmmetAbbreviation(args: any): Thenable<boolean | undefined
 
 	const abbreviationList: ExpandAbbreviationInput[] = [];
 	let firstAbbreviation: string;
-	let allAbbreviationsSame: boolean = true;
+	let allAbbreviationsSame = true;
 	const helper = getEmmetHelper();
 
 	const getAbbreviation = (document: vscode.TextDocument, selection: vscode.Selection, position: vscode.Position, syntax: string): [vscode.Range | null, string, string] => {

@@ -24,7 +24,7 @@ export class LineDecoder {
 	private stringDecoder: StringDecoder;
 	private remaining: string | null;
 
-	constructor(encoding: string = 'utf8') {
+	constructor(encoding = 'utf8') {
 		this.stringDecoder = new StringDecoder(encoding);
 		this.remaining = null;
 	}
@@ -87,7 +87,7 @@ namespace RunTrigger {
 
 export default class PHPValidationProvider {
 
-	private static MatchExpression: RegExp = /(?:(?:Parse|Fatal) error): (.*)(?: in )(.*?)(?: on line )(\d+)/;
+	private static MatchExpression = /(?:(?:Parse|Fatal) error): (.*)(?: in )(.*?)(?: on line )(\d+)/;
 	private static BufferArgs: string[] = ['-l', '-n', '-d', 'display_errors=On', '-d', 'log_errors=Off'];
 	private static FileArgs: string[] = ['-l', '-n', '-d', 'display_errors=On', '-d', 'log_errors=Off', '-f'];
 

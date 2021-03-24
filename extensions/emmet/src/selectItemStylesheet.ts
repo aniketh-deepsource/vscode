@@ -123,7 +123,7 @@ function getSelectionFromProperty(document: vscode.TextDocument, node: Node | un
 		return offsetRangeToSelection(document, propertyNode.valueToken.start, propertyNode.valueToken.end);
 	}
 
-	let pos: number = -1;
+	let pos = -1;
 	if (direction === 'prev') {
 		if (selectionStart === propertyNode.valueToken.start) {
 			return;
